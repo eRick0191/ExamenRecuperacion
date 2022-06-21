@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntradaProductoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtProducto"
+            android:layout_marginStart="15dp"
+            android:text="Producto: "
+            android:textSize="25sp">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Precio Venta"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            >
+        </TextView>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:id="@+id/txtTotalV"
+            android:inputType="number">
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Precio Compra"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            >
+        </TextView>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/txtTotalC"
+            android:inputType="text">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Ganancia"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            >
+        </TextView>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/txtTotalG"
+            android:inputType="text">
+        </EditText>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnCalcular"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/btnCalcular">
+        </Button>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="-50dp"
+            android:id="@+id/btnRegresar"
+            android:text="@string/btnRegresar">
+        </Button>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
