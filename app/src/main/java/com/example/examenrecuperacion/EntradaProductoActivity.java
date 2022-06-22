@@ -14,7 +14,6 @@ public class EntradaProductoActivity extends AppCompatActivity {
     private EditText txtTotalV;
     private EditText txtTotalC;
     private EditText txtTotalG;
-    private EditText txtDesc;
     private Button btnRegresar;
     private Button btnCalcular;
     EntradaProducto ent = new EntradaProducto();
@@ -38,8 +37,7 @@ public class EntradaProductoActivity extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ent.setCodigo(txtCodigo.getText().toString());
-                ent.setDescripcion(txtDescripcion.getText().toString());
+
                 float compra =Float.parseFloat(textCompra);
                 float venta = Float.parseFloat(textVenta);
                 int cantidad = Integer.parseInt(textCantidad);
@@ -67,6 +65,5 @@ public class EntradaProductoActivity extends AppCompatActivity {
         txtTotalG = (EditText) findViewById(R.id.txtTotalG);
         btnRegresar = (Button) findViewById(R.id.btnRegresar);
         btnCalcular = (Button) findViewById(R.id.btnCalcular);
-
     }
 }

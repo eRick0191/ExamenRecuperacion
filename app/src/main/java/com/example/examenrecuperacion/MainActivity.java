@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                             "Falta completar la informacion",
                             Toast.LENGTH_SHORT).show();
                 }else{
+                    ent.setCodigo(txtCodigo.getText().toString());
+                    ent.setDescripcion(txtDescripcion.getText().toString());
                     Intent intent = new Intent(MainActivity.this,EntradaProductoActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("ent", ent);
