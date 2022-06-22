@@ -1,18 +1,36 @@
 package com.example.examenrecuperacion;
 
-public class EntradaProducto {
+import java.io.Serializable;
+
+public class EntradaProducto implements Serializable {
+    private String codigo;
+    private String descripcion;
     private int cantidad;
     private float compra;
     private float venta;
 
-    public EntradaProducto(int cantidad, float compra, float venta) {
-        this.cantidad = cantidad;
-        this.compra = compra;
-        this.venta = venta;
+    public EntradaProducto(String codigo, String descripcion) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
     }
-
     public EntradaProducto(){
 
+    };
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public int getCantidad() {
@@ -40,14 +58,14 @@ public class EntradaProducto {
     }
 
     public float calcularPrecioVenta(){
+
         return venta*cantidad;
     }
-
     public float calcularPrecioCompra(){
         return compra*cantidad;
     }
-
     public float calcularGanancia(){
+
         return calcularPrecioVenta() - calcularPrecioCompra();
     }
 }

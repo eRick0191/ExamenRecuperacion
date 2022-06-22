@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLimpiar;
     private Button btnSiguiente;
     private Button btnSalir;
+    private EntradaProducto ent = new EntradaProducto();
     private void salir(){
         AlertDialog.Builder confirmar = new AlertDialog.Builder(this);
         confirmar.setTitle("¿Desea cerrar la aplicacion?");
@@ -70,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }else{
                     Intent intent = new Intent(MainActivity.this,EntradaProductoActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("ent", ent);
+                    intent.putExtras(bundle);
                     intent.putExtra ( "TextCantidad", txtCantidad.getText().toString() );
                     intent.putExtra ( "TextDesc", txtDescripcion.getText().toString() );
                     intent.putExtra ( "TextCompra", txtCompra.getText().toString() );
